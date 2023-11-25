@@ -2,11 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'EB Garamond' !important;
+
 }
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@300;400&display=swap');
+
+
+:root {
+    --primaryColor: #0C356A;
+    --secondaryColor: #fff;
+}
 
 .main-container {
-    background-image: url(images/bg.jpg);
+    background-image: url(images/css-cloud.webp);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -20,14 +29,19 @@
     width: 390px;
     height: 440px;
     border-radius: 15px;
-    background-color: #0C356A;
+    background-color: var(--primaryColor);
+    padding-top: 20px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 24px 6px rgba(255, 255, 255, 0.69);
+    -webkit-box-shadow: 0px 0px 24px 6px rgba(255, 255, 255, 0.69);
+    -moz-box-shadow: 0px 0px 24px 6px rgba(255, 255, 255, 0.69);
 }
 
 .search {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 20px;
 }
 
@@ -37,17 +51,34 @@
     font-size: 16px;
     outline: none;
     border: none;
-    background-color: #fff;
+    background-color: var(--secondaryColor);
     /* color: #0000; */
     border-radius: 20px;
     padding: 0px 20px;
 }
 
-.search button{
+.search button {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 22px;
     border: none;
+    background-color: var(--secondaryColor);
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--secondaryColor);
+}
+
+.weather img {
+    height: 140px;
+}
+
+.weather h2 {
+    font-size: 3rem;
 }
