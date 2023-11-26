@@ -133,3 +133,33 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
     background-color: var(--primaryColor) !important;
     width: 200px;
 }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .main-container {
+        height: auto;
+    }
+
+    .container {
+        width: 85%;
+        height: auto;
+        margin-top: 60px !important;
+    }
+
+    .details {
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+
+    .col>img {
+        height: 30px;
+    }
+
+    .weather img {
+        height: 155px;
+    }
+}

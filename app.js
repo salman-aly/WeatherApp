@@ -25,8 +25,8 @@ let userValue = () => {
             .then((data) => {
                 document.getElementById("cityName").innerHTML = data.name || "Gilgit";
                 document.getElementById("temperature").innerHTML = Math.round(data.main.temp) + "°C";
-                document.querySelector(".humidity").innerHTML = data.main.humidity;
-                document.querySelector(".wind").innerHTML = data.wind.speed;
+                document.querySelector(".humidity").innerHTML = data.main.humidity + "%"
+                document.querySelector(".wind").innerHTML = data.wind.speed + "km/h"
 
                 if (data.weather[0].main === "Clouds") {
                     weatherImages.src = "images/clouds.png"
