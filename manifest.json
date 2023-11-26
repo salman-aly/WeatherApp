@@ -3,7 +3,7 @@
   "short_name": "Weather App",
   "start_url": "/main.html",
   "display": "standalone",
-  "background_color": "#fff",
+  "background_color": "##0C356A",
   "theme_color": "#0C356A",
   "scope": "https://weather-app-sa.netlify.app/",
   "description": "Weather app by sa",
