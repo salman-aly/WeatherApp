@@ -31,7 +31,7 @@ let userValue = () => {
                 if (data.weather[0].main === "Clouds") {
                     weatherImages.src = "images/clouds.png"
                 } else if (data.weather[0].main === "Clear") {
-                    weatherImages.src = "images/clear.png"
+                    weatherImages.src = "images/clr.gif"
                 } else if (data.weather[0].main === "rain") {
                     weatherImages.src = "images/rain.png"
                 } else if (data.weather[0].main === "Mist") {
@@ -67,13 +67,12 @@ var navigator = navigator.geolocation.getCurrentPosition((location) => {
         .then((data) => {
             document.getElementById("cityName").innerHTML = data.name.toUpperCase();
             document.getElementById("temperature").innerHTML = Math.round(data.main.temp) + "°C";
-            document.querySelector(".humidity").innerHTML = data.main.humidity + "%"
-            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h"
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
         })
+        .catch((err) => console.log(err));
+});
 
-        .catch((err) => console.log(err))
-
-})
 
 
 
