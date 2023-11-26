@@ -8,6 +8,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@300;400&display=swap');
 
+:root {
+    --primaryColor: #0C356A;
+    --secondaryColor: #fff;
+}
+
+
 
 .animate-container {
     background-image: url(images/snowingbg.gif);
@@ -31,13 +37,6 @@
     color: var(--primaryColor);
 }
 
-
-
-
-:root {
-    --primaryColor: #0C356A;
-    --secondaryColor: #fff;
-}
 
 .main-container {
     background-image: url(images/css-cloud.webp);

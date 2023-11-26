@@ -23,7 +23,7 @@ let userValue = () => {
 
         weatherData
             .then((data) => {
-                document.getElementById("cityName").innerHTML = data.name || "Gilgit";
+                document.getElementById("cityName").innerHTML = data.name.toUpperCase();
                 document.getElementById("temperature").innerHTML = Math.round(data.main.temp) + "°C";
                 document.querySelector(".humidity").innerHTML = data.main.humidity + "%"
                 document.querySelector(".wind").innerHTML = data.wind.speed + "km/h"
@@ -51,5 +51,29 @@ let userValue = () => {
         document.getElementById("userInput").value = "";
     }
 };
+
+
+
+// Show user current weather with the help of location
+
+var navigator = navigator.geolocation.getCurrentPosition((location) => {
+    const latitude = location.coords.latitude;
+    const longitude = location.coords.longitude;
+
+    const locationApi = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=b5372d9f93861c3a079f1e75dd399327`;
+
+    fetch(locationApi)
+        .then((res) => res.json())
+        .then((data) => {
+            document.getElementById("cityName").innerHTML = data.name.toUpperCase();
+            document.getElementById("temperature").innerHTML = Math.round(data.main.temp) + "°C";
+            document.querySelector(".humidity").innerHTML = data.main.humidity + "%"
+            document.querySelector(".wind").innerHTML = data.wind.speed + "km/h"
+        })
+
+        .catch((err) => console.log(err))
+
+})
+
 
 
