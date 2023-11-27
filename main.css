@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'EB Garamond' !important;
+    font-family: 'Roboto', sans-serif;
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Poppins:wght@300;400&display=swap');
+
+
 
 :root {
     --primaryColor: #0C356A;
@@ -40,9 +45,9 @@
     justify-content: space-evenly;
 }
 
-.animate-container button img{
+.animate-container button img {
     height: 25px;
-} 
+}
 
 
 .main-container {
@@ -109,8 +114,14 @@
     height: 160px;
 }
 
-.weather h2 {
+.weather h1{
+    font-weight: 400;
+
+}
+
+.weather h2{
     font-size: 3rem;
+    font-weight: 300;
 }
 
 .details {
