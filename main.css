@@ -35,7 +35,14 @@
     cursor: pointer;
     background-color: var(--secondaryColor);
     color: var(--primaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
+.animate-container button img{
+    height: 25px;
+} 
 
 
 .main-container {
