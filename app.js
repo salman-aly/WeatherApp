@@ -7,6 +7,14 @@ let userValue = () => {
     let userValue = userSearch.value;
     const weatherImages = document.getElementById("weatherImg");
 
+    
+    // setInterval(() => {
+    //     let timeDate = document.getElementById("timeDate");
+    //     timeDate.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a')
+    // }, 1000);
+
+
+
     const apiKey = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=b5372d9f93861c3a079f1e75dd399327&q=${userValue}`;
 
     // console.log("User Input:", userValue);
@@ -77,42 +85,5 @@ var navigator = navigator.geolocation.getCurrentPosition((location) => {
 
 
 
-//for push notification
-
-// Check if the browser supports service workers
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-        .register("/serviceworker.js")
-        .then(function (registration) {
-            console.log("Service Worker registered with scope:", registration.scope);
-            return registration.pushManager
-                .getSubscription()
-                .then(function (subscription) {
-                    if (subscription) {
-                        console.log("User is already subscribed:", subscription);
-                    } else {
-                        return registration.pushManager
-                            .subscribe({ userVisibleOnly: true })
-                            .then(function (newSubscription) {
-                                console.log("Subscribed:", newSubscription);
-                            });
-                    }
-                });
-        })
-        .catch(function (error) {
-            console.error("Service Worker registration failed:", error);
-        });
-}
-
-// Request notification permission
-if ("Notification" in window) {
-    Notification.requestPermission().then(function (permission) {
-        if (permission === "granted") {
-            console.log("Notification permission granted.");
-        } else {
-            console.error("Notification permission denied.");
-        }
-    });
-}
 
 
